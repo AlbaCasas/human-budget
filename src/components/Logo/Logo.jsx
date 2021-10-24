@@ -1,5 +1,7 @@
+import "./Logo.css";
+
 const Logo = () => {
-    return <p>Budget</p>
+    return <p>Human Budget</p>
 }
 
 export default Logo;
