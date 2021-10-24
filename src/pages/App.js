@@ -1,9 +1,9 @@
-import Logo from "../components/Logo";
+import Layout from "../components/Layout";
 
 function App() {
   return (
     <div className="App">
-      <Logo></Logo>
+      <Layout/>
     </div>
   );
 }
