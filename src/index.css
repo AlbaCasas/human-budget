@@ -51,3 +51,8 @@ body {
     background-color: #F1F2F6;
     font-family: Lato;
 }
+
+/*Every element calculates their width and height taking into account their padding (100% of width is equal 100% - padding, aka maybe 98%, 95% whatever)*/
+* {
+	box-sizing: border-box;
+}
