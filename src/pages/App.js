@@ -1,10 +1,11 @@
 import Layout from "../components/Layout";
+import ExpenseCard from "../components/ExpenseCard";
 
 function App() {
   return (
     <div className="App">
-      <Layout>asdasds
-        
+      <Layout>
+        <ExpenseCard/>
       </Layout>
     </div>
   );
