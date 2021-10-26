@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <ExpenseCard title="Hola" date="12/10" amount="400$" />
+        <ExpenseCard title="Hola" date="12 de Octubre, 2021" amount="400$" />
       </Layout>
     </div>
   );
