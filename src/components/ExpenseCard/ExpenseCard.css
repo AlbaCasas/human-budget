@@ -1,0 +1,37 @@
+.expense {
+    background-color: white;
+    width: 100%;
+    padding: 16px 200px 16px 32px;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px #ddd, 0 1px 2px #ddd;
+    display:flex;
+    align-items: center;
+}
+
+.expense__text--regular {
+    font-size: 14px;
+    color:#908f92 ;
+    font-weight: 600;
+}
+
+.expense__text--bold {
+    font-size:18px;
+    font-weight: 900;
+}
+
+.expense__date {
+    margin-top: 4px;
+}
+
+.expense__color {
+    background-color: #e3f1fd;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+}
+
+.expense__left {
+    flex-grow: 1;
+    margin-left: 16px;
+}
