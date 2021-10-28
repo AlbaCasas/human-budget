@@ -1,8 +1,9 @@
 import Icon from "../Icon/Icon";
-import getPath from "./utils";
+import getPath, {getClassName} from "./utils";
+import "./Button.css";
 
 const Button = (props) => {
-    return <button>
+    return <button className={getClassName(props.variant)}>
         {props.text}
         <Icon path={getPath(props.icon)} />
     </button>
@@ -10,3 +11,6 @@ const Button = (props) => {
 
 export default Button;
 
+
+// <Button variant="default" icon="plus" /> ->    + 
+// <Button variant="outlined" icon="plus" /> -> | + |
