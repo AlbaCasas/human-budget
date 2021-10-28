@@ -1,0 +1,27 @@
+.button {
+    border-radius: 10px;
+    border: 0;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.button--default {
+    background-color: #ddecff;
+    color: #57a2f1;
+}
+
+.button--outlined {
+    border: 2px dashed #ccc;
+    background-color: transparent;
+    color: #999;
+}
+
+.button:hover {
+    box-shadow: 0 1px 3px #ddd, 0 1px 2px #ddd;
+}
