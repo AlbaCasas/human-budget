@@ -1,5 +1,5 @@
-import Icon from "../Icon/Icon";
-import getPath, {getClassName} from "./utils";
+import Icon from "../Icon";
+import getPath, { getClassName } from "./utils";
 import "./Button.css";
 
 const Button = (props) => {
@@ -10,7 +10,3 @@ const Button = (props) => {
 }
 
 export default Button;
-
-
-// <Button variant="default" icon="plus" /> ->    + 
-// <Button variant="outlined" icon="plus" /> -> | + |
