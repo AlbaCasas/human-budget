@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Layout>
         <ExpenseCard title="Hola" date="12 de Octubre, 2021" amount="400$" />
-        <IconCard title="Home Wallet" subtitle="$1000,00"/>
+        <IconCard title="Home Wallet" subtitle="$1000,00" icon="wallet"/>
       </Layout>
     </div>
   );
