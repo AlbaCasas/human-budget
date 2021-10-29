@@ -1,5 +1,5 @@
 const Icon = (props) => {
-    return <svg width="24px" height="24px" viewBox="0 0 24 24">
+    return <svg width="24px" height="24px" viewBox="0 0 24 24" className={props.className}>
         <path fill="currentColor" d={props.path} />
     </svg>
 }
