@@ -1,0 +1,31 @@
+.totalAmount {
+    display: flex;
+    align-items: center;
+    padding: 24px 32px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px #ddd, 0 1px 2px #ddd;
+    background-color: white;
+    width: 300px;
+}
+
+.totalAmount__svg {
+    width: 48px;
+    height: 48px;
+    margin-right: 24px;
+}
+
+.totalAmount__amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.totalAmount__text {
+    color: #999;
+}
+
+.totalAmount__content {
+    display: flex;
+    flex-direction: column;
+}
