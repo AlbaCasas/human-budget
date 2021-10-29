@@ -1,0 +1,21 @@
+.iconCard {
+    padding: 16px;
+    display: flex; 
+    align-items: center;  
+}
+
+.iconCard__title {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.iconCard__subtitle {
+    color: #908f92;
+}
+
+.iconCard__icon {
+    margin-right: 16px;
+    width: 32px;
+    height: 32px;
+    color: #57a2f1;
+}
