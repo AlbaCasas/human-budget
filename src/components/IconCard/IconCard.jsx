@@ -1,7 +1,7 @@
 const IconCard = (props) => {
     return <div>
-        <p>Hola</p>
-        <p>Hola</p>
+        <p>{props.title}</p>
+        <p>{props.subtitle}</p>
     </div>;
 }
 
