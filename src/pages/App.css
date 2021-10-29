@@ -1,6 +1,13 @@
-.app__heading {
+.app__cta {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
+    justify-content: space-between;
+}
+
+.app__header {
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
