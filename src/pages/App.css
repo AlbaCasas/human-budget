@@ -1,0 +1,6 @@
+.app__heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    justify-content: space-between;
+}
