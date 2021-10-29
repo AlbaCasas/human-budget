@@ -10,7 +10,8 @@
 
 .layout__sidebar {
     width: 350px;
-    padding: 48px 24px;
+    padding: 48px 40px;
+    padding-top: 96px;
 }
 
 .layout__content {
