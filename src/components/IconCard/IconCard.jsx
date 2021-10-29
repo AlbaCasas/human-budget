@@ -1,7 +1,8 @@
+import "./IconCard.css";
 const IconCard = (props) => {
-    return <div>
-        <p>{props.title}</p>
-        <p>{props.subtitle}</p>
+    return <div className="iconCard">
+        <p className="iconCard__title">{props.title}</p>
+        <p className="iconCard__subtitle">{props.subtitle}</p>
     </div>;
 }
 

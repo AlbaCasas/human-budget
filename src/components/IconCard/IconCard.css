@@ -1,0 +1,12 @@
+.iconCard {
+    padding: 16px;   
+}
+
+.iconCard__title {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.iconCard__subtitle {
+    color: #908f92;
+}
