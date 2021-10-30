@@ -3,6 +3,7 @@ import ExpenseCard from "../components/ExpenseCard";
 import Title from "../components/Title";
 import Button from "../components/Button";
 import TotalAmount from "../components/TotalAmount";
+import Modal from "../components/Modal"
 import moneySvg from "../assets/money.svg";
 import spentSvg from "../assets/spent.svg";
 import bankSvg from "../assets/bank.svg";
@@ -11,6 +12,7 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
+      <Modal>hola</Modal>
       <Layout>
         <div className="app__header">
           <TotalAmount text="Amount left to spend" img={moneySvg}>600</TotalAmount>
