@@ -1,8 +1,11 @@
+import Icon from "../Icon";
 import "./ExpenseCard.css";
 
 const ExpenseCard = (props) => {
     return <div className="expense">
-        <div className="expense__color"/>
+        <div className={`expense__color expense__color--${props.color}`}>
+            <Icon icon={props.icon}/>
+        </div>
         <div className="expense__left">
             <p className="expense__text--bold">{props.title}</p>
             <p className="expense__text--regular expense__date">{props.date}</p>

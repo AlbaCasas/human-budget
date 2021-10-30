@@ -21,7 +21,11 @@ function App() {
           <Title>Expenses</Title>
           <Button icon="plus" variant="default" text="Add Expense"/>
         </div>
-        <ExpenseCard title="Clothing" date="12 de Octubre, 2021" amount="400$" />
+        <ExpenseCard title="Spotify" date="12 de Octubre, 2021" amount="-10.00$" icon="music" color="blue"/>
+        <ExpenseCard title="Home" date="12 de Octubre, 2021" amount="-150.00$" icon="home" color="green"/>
+        <ExpenseCard title="Food" date="12 de Octubre, 2021" amount="-200.00$" icon="wallet" color="yellow"/>
+        <ExpenseCard title="Clothing" date="12 de Octubre, 2021" amount="-40.00$" icon="shopping" color="gray"/>
+
       </Layout>
     </div>
   );
