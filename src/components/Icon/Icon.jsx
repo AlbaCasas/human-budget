@@ -4,6 +4,7 @@ const getPath = (iconName) => {
     const homePath = "M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z";
     const pathPlus = "M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z";
     const pathClose = "M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z";
+    const pathShopping = "M12,13A5,5 0 0,1 7,8H9A3,3 0 0,0 12,11A3,3 0 0,0 15,8H17A5,5 0 0,1 12,13M12,3A3,3 0 0,1 15,6H9A3,3 0 0,1 12,3M19,6H17A5,5 0 0,0 12,1A5,5 0 0,0 7,6H5C3.89,6 3,6.89 3,8V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V8C21,6.89 20.1,6 19,6Z";
     
     if (iconName === "plus") {
         return pathPlus;
@@ -20,6 +21,10 @@ const getPath = (iconName) => {
     if (iconName === "home") {
         return homePath;
     }
+
+    if (iconName === "shopping")
+        return pathShopping;
+
     return null;
 }
 
