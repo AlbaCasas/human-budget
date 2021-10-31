@@ -21,7 +21,7 @@ function App() {
         </div>
         <div className="app__cta">
           <Title>Expenses</Title>
-          <Button icon="plus" variant="default" text="Add Expense"/>
+          <Button icon="plus" variant="default">Add Expense</Button>
         </div>
         <ExpenseCard title="Spotify" date="12 de Octubre, 2021" amount="-10.00$" icon="music" color="blue"/>
         <ExpenseCard title="Home" date="12 de Octubre, 2021" amount="-150.00$" icon="home" color="green"/>
