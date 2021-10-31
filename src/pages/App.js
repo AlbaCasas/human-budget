@@ -14,7 +14,9 @@ function App() {
   const [isModalShown, setIsModalShown] = useState(false);
   return (
     <div className="app">
-      <CreateExpenseModal isShown={isModalShown}/>
+      <CreateExpenseModal onCloseClick={() => {
+        setIsModalShown(false);
+      }} isShown={isModalShown}/>
       <Layout>
         <div className="app__header">
           <TotalAmount text="Amount left to spend" img={moneySvg}>600</TotalAmount>
