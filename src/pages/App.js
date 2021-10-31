@@ -11,12 +11,12 @@ import bankSvg from "../assets/bank.svg";
 import "./App.css";
 
 function App() {
-  const [isModalShown, setIsModalShown] = useState(false);
+  const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
   return (
     <div className="app">
       <CreateExpenseModal onCloseClick={() => {
-        setIsModalShown(false);
-      }} isShown={isModalShown}/>
+        setIsExpenseModalShown(false);
+      }} isShown={isExpenseModalShown}/>
       <Layout>
         <div className="app__header">
           <TotalAmount text="Amount left to spend" img={moneySvg}>600</TotalAmount>
@@ -26,7 +26,7 @@ function App() {
         <div className="app__cta">
           <Title>Expenses</Title>
           <Button onClick={() => {
-              setIsModalShown(true);
+              setIsExpenseModalShown(true);
             }} icon="plus" variant="default">Add Expense</Button>
         </div>
         <ExpenseCard title="Spotify" date="12 de Octubre, 2021" amount="-10.00$" icon="music" color="blue"/>
