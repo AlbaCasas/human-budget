@@ -4,7 +4,7 @@ import "./Modal.css";
 const Modal = (props) => {
     return <>
         <div className="backdrop"/>
-        <div className="modal">
+        <div className={`modal ${props.className}`}>
             <button className="modal__close">
                 <Icon icon="close"/> 
             </button> 
