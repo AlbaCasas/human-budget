@@ -10,8 +10,23 @@ import spentSvg from "../assets/spent.svg";
 import bankSvg from "../assets/bank.svg";
 import "./App.css";
 
+const expense1 = {
+  title: "Spotify",
+  date: "12 de Octubre, 2021",
+  amount: "$20",
+  icon: "music",
+  color: "gray"
+};
+const expense2 = {
+  title: "Casa",
+  date: "16 de Octubre, 2021",
+  amount: "$73",
+  icon: "home"
+};
+
 function App() {
   const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
+  const [expenses, setExpenses] = useState([expense1,expense2]);
   return (
     <div className="app">
       <CreateExpenseModal onCloseClick={() => {
@@ -29,10 +44,9 @@ function App() {
               setIsExpenseModalShown(true);
             }} icon="plus" variant="default">Add Expense</Button>
         </div>
-        <ExpenseCard title="Spotify" date="12 de Octubre, 2021" amount="-10.00$" icon="music" color="blue"/>
-        <ExpenseCard title="Home" date="12 de Octubre, 2021" amount="-150.00$" icon="home" color="green"/>
-        <ExpenseCard title="Food" date="12 de Octubre, 2021" amount="-200.00$" icon="wallet" color="yellow"/>
-        <ExpenseCard title="Clothing" date="12 de Octubre, 2021" amount="-40.00$" icon="shopping" color="gray"/>
+        {expenses.map((item) => {
+          return <ExpenseCard title={item.title} date={item.date} amount={item.amount} icon={item.icon} color={item.color}/>
+        })}
       </Layout>
     </div>
   );
