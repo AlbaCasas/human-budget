@@ -3,6 +3,7 @@
     color: white;
     width: fit-content;
     padding: 16px;
+    padding-right: 64px;
     display: flex;
     align-items: center;
     border-radius: 3px;
@@ -10,6 +11,7 @@
     right: 16px;
     bottom: 16px;
     min-width: 300px;
+    z-index: 1;
 }
 
 .toast__icon {

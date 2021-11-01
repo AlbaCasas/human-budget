@@ -11,7 +11,7 @@ const CreateExpenseModal = (props) => {
             <div className="expense-modal__form">
                 <Input className="expense-modal__input expense-modal__input--name" placeholder="Expense name"/>
                 <Input className="expense-modal__input expense-modal__input--amount" placeholder="$ Amount" type="number"/>
-                <Button variant="default" icon="plus"/>
+                <Button onClick={props.onSubmit} variant="default" icon="plus"/>
             </div>
         </Modal>
     ) : null;

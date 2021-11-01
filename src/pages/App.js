@@ -13,10 +13,15 @@ import "./App.css";
 
 function App() {
   const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
   return (
     <div className="app">
-      <Toast text="hola"/>
-      <CreateExpenseModal onCloseClick={() => {
+      {errorMessage ?  <Toast onClose={() => {
+        setErrorMessage(null);
+      }} text={errorMessage}/> : null}
+      <CreateExpenseModal onSubmit={() => {
+        setErrorMessage("Can't perform this action right now");
+      }} onCloseClick={() => {
         setIsExpenseModalShown(false);
       }} isShown={isExpenseModalShown}/>
       <Layout>
