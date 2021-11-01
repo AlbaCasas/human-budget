@@ -5,6 +5,7 @@ import Title from "../components/Title";
 import Button from "../components/Button";
 import TotalAmount from "../components/TotalAmount";
 import CreateExpenseModal from "../components/CreateExpenseModal";
+import Toast from "../components/Toast";
 import moneySvg from "../assets/money.svg";
 import spentSvg from "../assets/spent.svg";
 import bankSvg from "../assets/bank.svg";
@@ -14,6 +15,7 @@ function App() {
   const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
   return (
     <div className="app">
+      <Toast text="hola"/>
       <CreateExpenseModal onCloseClick={() => {
         setIsExpenseModalShown(false);
       }} isShown={isExpenseModalShown}/>

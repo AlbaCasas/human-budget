@@ -1,0 +1,33 @@
+.toast {
+    background-color: #B3404A;
+    color: white;
+    width: fit-content;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    min-width: 300px;
+}
+
+.toast__icon {
+    margin-right: 16px;
+    color: #B3404A;
+    background-color: white;
+    border-radius: 100px;
+    padding: 4px;
+    width: 28px;
+    height: 28px;
+}
+
+.toast__close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
