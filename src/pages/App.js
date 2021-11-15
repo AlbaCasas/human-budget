@@ -27,9 +27,22 @@ const expense2 = {
 function App() {
   const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
   const [expenses, setExpenses] = useState([expense1,expense2]);
+
+  const handleExpenseSubmit = (event) => {
+    event.preventDefault();
+    setExpenses([...expenses, {
+      title: "ASDF",
+      date: "34",
+      amount: "45$",
+      icon: "home"
+    }])
+  };
+  
   return (
     <div className="app">
-      <CreateExpenseModal onCloseClick={() => {
+      <CreateExpenseModal
+       onSubmit={handleExpenseSubmit}
+       onCloseClick={() => {
         setIsExpenseModalShown(false);
       }} isShown={isExpenseModalShown}/>
       <Layout>

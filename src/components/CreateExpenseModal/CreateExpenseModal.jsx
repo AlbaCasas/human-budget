@@ -5,16 +5,23 @@ import Button from "../Button";
 import "./CreateExpenseModal.css";
 
 const CreateExpenseModal = (props) => {
-    return props.isShown === true ? (
-        <Modal className="expense-modal" onCloseClick={props.onCloseClick}>
-            <Title>Add new expense</Title>
-            <div className="expense-modal__form">
-                <Input className="expense-modal__input expense-modal__input--name" placeholder="Expense name"/>
-                <Input className="expense-modal__input expense-modal__input--amount" placeholder="$ Amount" type="number"/>
-                <Button variant="default" icon="plus"/>
-            </div>
-        </Modal>
-    ) : null;
-}
+  return props.isShown === true ? (
+    <Modal className="expense-modal" onCloseClick={props.onCloseClick}>
+      <Title>Add new expense</Title>
+      <form className="expense-modal__form" onSubmit={props.onSubmit}>
+        <Input
+          className="expense-modal__input expense-modal__input--name"
+          placeholder="Expense name"
+        />
+        <Input
+          className="expense-modal__input expense-modal__input--amount"
+          placeholder="$ Amount"
+          type="number"
+        />
+        <Button variant="default" icon="plus" />
+      </form>
+    </Modal>
+  ) : null;
+};
 
 export default CreateExpenseModal;
