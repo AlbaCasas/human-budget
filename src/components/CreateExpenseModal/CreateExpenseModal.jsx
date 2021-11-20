@@ -10,8 +10,8 @@ const AMOUNT_NAME = "amount";
 const CreateExpenseModal = (props) => {
   const handleExpenseSubmit = (event) => {
     event.preventDefault();
-    const titleValue = event.target[{ TITLE_NAME }].value;
-    const amountValue = event.target[{ AMOUNT_NAME }].value;
+    const titleValue = event.target[TITLE_NAME].value;
+    const amountValue = event.target[AMOUNT_NAME].value;
     if (titleValue !== "" && amountValue !== "") {
       props.setExpenses([
         ...props.expenses,

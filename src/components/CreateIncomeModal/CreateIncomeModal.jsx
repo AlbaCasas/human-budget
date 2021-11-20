@@ -10,8 +10,8 @@ const AMOUNT_NAME = "amount";
 const CreateIncomeModal = (props) => {
   const handleIncomeSubmit = (event) => {
     event.preventDefault();
-    const titleValue = event.target[{ TITLE_NAME }].value;
-    const amountValue = event.target[{ AMOUNT_NAME }].value;
+    const titleValue = event.target[TITLE_NAME].value;
+    const amountValue = event.target[AMOUNT_NAME].value;
     if (titleValue !== "" && amountValue !== "") {
       props.setIncomes([
         ...props.incomes,
