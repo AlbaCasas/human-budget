@@ -4,11 +4,14 @@ import Input from "../Input";
 import Button from "../Button";
 import "./CreateExpenseModal.css";
 
+const TITLE_NAME = "title";
+const AMOUNT_NAME = "amount";
+
 const CreateExpenseModal = (props) => {
   const handleExpenseSubmit = (event) => {
     event.preventDefault();
-    const titleValue = event.target["title"].value;
-    const amountValue = event.target["amount"].value;
+    const titleValue = event.target[{ TITLE_NAME }].value;
+    const amountValue = event.target[{ AMOUNT_NAME }].value;
     if (titleValue !== "" && amountValue !== "") {
       props.setExpenses([
         ...props.expenses,
@@ -26,12 +29,12 @@ const CreateExpenseModal = (props) => {
       <Title>Add new expense</Title>
       <form className="expense-modal__form" onSubmit={handleExpenseSubmit}>
         <Input
-          name="title"
+          name={TITLE_NAME}
           className="expense-modal__input expense-modal__input--name"
           placeholder="Expense name"
         />
         <Input
-          name="amount"
+          name={AMOUNT_NAME}
           className="expense-modal__input expense-modal__input--amount"
           placeholder="$ Amount"
           type="number"
