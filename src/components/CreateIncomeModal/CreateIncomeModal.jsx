@@ -4,11 +4,14 @@ import Button from "../Button";
 import Title from "../Title";
 import "./CreateIncomeModal.css";
 
+const TITLE_NAME = "title";
+const AMOUNT_NAME = "amount";
+
 const CreateIncomeModal = (props) => {
   const handleIncomeSubmit = (event) => {
     event.preventDefault();
-    const titleValue = event.target["title"].value;
-    const amountValue = event.target["amount"].value;
+    const titleValue = event.target[{ TITLE_NAME }].value;
+    const amountValue = event.target[{ AMOUNT_NAME }].value;
     if (titleValue !== "" && amountValue !== "") {
       props.setIncomes([
         ...props.incomes,
@@ -26,12 +29,12 @@ const CreateIncomeModal = (props) => {
       <Title>Add income</Title>
       <form className="income-modal__form" onSubmit={handleIncomeSubmit}>
         <Input
-          name="title"
+          name={TITLE_NAME}
           className="income-modal__input income-modal__input--name"
           placeholder="income name"
         />
         <Input
-          name="amount"
+          name={AMOUNT_NAME}
           className="income-modal__input income-modal__input--amount"
           placeholder="$ Amount"
           type="number"
