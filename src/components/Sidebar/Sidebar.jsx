@@ -3,12 +3,16 @@ import Title from "../Title";
 import Button from "../Button";
 import CreateIncomeModal from "../CreateIncomeModal/";
 import "./Sidebar.css";
+import ExpenseCard from "../ExpenseCard";
 
 const Sidebar = (props) => {
   const [isIncomeModalShown, setIsIncomeModalShown] = useState(false);
+  const [incomes, setIncomes] = useState([]);
   return (
     <aside className={`sidebar ${props.className}`}>
       <CreateIncomeModal
+        setIncomes={setIncomes}
+        incomes={incomes}
         onCloseClick={() => {
           setIsIncomeModalShown(false);
         }}
@@ -24,6 +28,17 @@ const Sidebar = (props) => {
           variant="default"
         />
       </div>
+      {incomes.map((item) => {
+        return (
+          <ExpenseCard
+            title={item.title}
+            date={item.date}
+            amount={item.amount}
+            icon={item.icon}
+            color={item.color}
+          />
+        );
+      })}
     </aside>
   );
 };
