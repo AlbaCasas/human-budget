@@ -29,7 +29,7 @@ const App = () => {
         isShown={isExpenseModalShown}
         setToastMessage={setToastMessage}
       />
-      <Layout>
+      <Layout setToastMessage={setToastMessage}>
         <div className="app__header">
           <TotalAmount text="Amount left to spend" img={moneySvg}>
             600
