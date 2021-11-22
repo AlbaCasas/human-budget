@@ -1,7 +1,7 @@
-import Modal from "../Modal";
-import Input from "../Input";
-import Button from "../Button";
-import Title from "../Title";
+import Modal from "../../../components/Modal";
+import Input from "../../../components/Input";
+import Button from "../../../components/Button";
+import Title from "../../../components/Title";
 import "./CreateIncomeModal.css";
 
 const TITLE_NAME = "title";

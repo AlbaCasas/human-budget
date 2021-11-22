@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Title from "../../components/Title";
 import Button from "../../components/Button";
-import ExpenseCard from "../../components/ExpenseCard";
-import CreateExpenseModal from "../../components/CreateExpenseModal";
+import ExpenseCard from "./ExpenseCard";
+import CreateExpenseModal from "./CreateExpenseModal";
 
 const Expenses = (props) => {
   const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
