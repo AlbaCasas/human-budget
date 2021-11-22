@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import ExpenseCard from "../components/ExpenseCard";
 import Title from "../components/Title";
 import Button from "../components/Button";
+import Toast from "../components/Toast/Toast";
 import TotalAmount from "../components/TotalAmount";
 import CreateExpenseModal from "../components/CreateExpenseModal";
 import moneySvg from "../assets/money.svg";
@@ -16,6 +17,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <Toast>Hello</Toast>
       <CreateExpenseModal
         setExpenses={setExpenses}
         expenses={expenses}
