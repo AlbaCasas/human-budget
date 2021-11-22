@@ -1,0 +1,62 @@
+.incomes {
+  background-color: white;
+  width: 100%;
+  padding: 16px 200px 16px 32px;
+  height: 104px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px #ddd, 0 1px 2px #ddd;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.incomes__text--regular {
+  font-size: 14px;
+  color: #908f92;
+  font-weight: 400;
+}
+
+.incomes__text--bold {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.incomes__date {
+  margin-top: 4px;
+}
+
+.incomes__color {
+  background-color: #e3f1fd;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1487fe;
+}
+
+.incomes__color--gray {
+  background-color: #ccc;
+  color: #999;
+}
+
+.incomes__color--yellow {
+  background-color: yellow;
+  color: orange;
+}
+
+.incomes__color--red {
+  background-color: red;
+  color: crimson;
+}
+
+.incomes__color--green {
+  background-color: green;
+  color: greenyellow;
+}
+
+.incomes__left {
+  flex-grow: 1;
+  margin-left: 16px;
+}
