@@ -14,17 +14,20 @@ import "./App.css";
 const App = () => {
   const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
   const [expenses, setExpenses] = useState([]);
+  const [toastMessage, setToastMessage] = useState(null);
 
   return (
     <div className="app">
-      <Toast>Hello</Toast>
+      {toastMessage !== null && <Toast>{toastMessage}</Toast>}
+
       <CreateExpenseModal
         setExpenses={setExpenses}
         expenses={expenses}
-        onCloseClick={() => {
+        onClose={() => {
           setIsExpenseModalShown(false);
         }}
         isShown={isExpenseModalShown}
+        setToastMessage={setToastMessage}
       />
       <Layout>
         <div className="app__header">

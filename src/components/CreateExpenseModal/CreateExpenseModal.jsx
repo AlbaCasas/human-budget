@@ -22,10 +22,12 @@ const CreateExpenseModal = (props) => {
           icon: "home",
         },
       ]);
+      props.setToastMessage("Expense created successfully");
+      props.onClose();
     }
   };
   return props.isShown === true ? (
-    <Modal className="expense-modal" onCloseClick={props.onCloseClick}>
+    <Modal className="expense-modal" onCloseClick={props.onClose}>
       <Title>Add new expense</Title>
       <form className="expense-modal__form" onSubmit={handleExpenseSubmit}>
         <Input
