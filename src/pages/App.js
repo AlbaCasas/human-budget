@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import Toast from "../components/Toast/Toast";
 import TotalAmount from "../components/TotalAmount";
 import CreateExpenseModal from "../components/CreateExpenseModal";
+import CreateIncomeModal from "../components/CreateIncomeModal";
 import moneySvg from "../assets/money.svg";
 import spentSvg from "../assets/spent.svg";
 import bankSvg from "../assets/bank.svg";
@@ -15,11 +16,21 @@ const App = () => {
   const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
   const [expenses, setExpenses] = useState([]);
   const [toastMessage, setToastMessage] = useState(null);
+  const [isIncomeModalShown, setIsIncomeModalShown] = useState(false);
+  const [incomes, setIncomes] = useState([]);
 
   return (
     <div className="app">
       {toastMessage !== null && <Toast>{toastMessage}</Toast>}
-
+      <CreateIncomeModal
+        setToastMessage={setToastMessage}
+        setIncomes={setIncomes}
+        incomes={incomes}
+        onClose={() => {
+          setIsIncomeModalShown(false);
+        }}
+        isShown={isIncomeModalShown}
+      />
       <CreateExpenseModal
         setExpenses={setExpenses}
         expenses={expenses}
@@ -29,7 +40,7 @@ const App = () => {
         isShown={isExpenseModalShown}
         setToastMessage={setToastMessage}
       />
-      <Layout setToastMessage={setToastMessage}>
+      <Layout incomes={incomes} setIsIncomeModalShown={setIsIncomeModalShown}>
         <div className="app__header">
           <TotalAmount text="Amount left to spend" img={moneySvg}>
             600

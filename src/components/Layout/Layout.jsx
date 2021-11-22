@@ -13,7 +13,8 @@ const Layout = (props) => {
       </div>
       <Sidebar
         className="layout__sidebar"
-        setToastMessage={props.setToastMessage}
+        setIsIncomeModalShown={props.setIsIncomeModalShown}
+        incomes={props.incomes}
       />
     </div>
   );
