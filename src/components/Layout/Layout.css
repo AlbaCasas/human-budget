@@ -1,20 +1,14 @@
 .layout {
-    width: 100vw;
-    display: flex;
+  width: 100vw;
+  display: flex;
 }
 
 .layout__nav {
-    height: fit-content;
-    margin-bottom: 48px;
-}
-
-.layout__sidebar {
-    width: 350px;
-    padding: 48px 40px;
-    padding-top: 96px;
+  height: fit-content;
+  margin-bottom: 48px;
 }
 
 .layout__content {
-    flex-grow: 1;
-    padding: 48px 72px;
+  flex-grow: 1;
+  padding: 48px 72px;
 }
