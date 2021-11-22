@@ -11,9 +11,10 @@ const Sidebar = (props) => {
   return (
     <aside className={`sidebar ${props.className}`}>
       <CreateIncomeModal
+        setToastMessage={props.setToastMessage}
         setIncomes={setIncomes}
         incomes={incomes}
-        onCloseClick={() => {
+        onClose={() => {
           setIsIncomeModalShown(false);
         }}
         isShown={isIncomeModalShown}

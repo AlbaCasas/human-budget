@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import ExpenseCard from "../components/ExpenseCard";
 import Title from "../components/Title";
 import Button from "../components/Button";
+import Toast from "../components/Toast/Toast";
 import TotalAmount from "../components/TotalAmount";
 import CreateExpenseModal from "../components/CreateExpenseModal";
 import moneySvg from "../assets/money.svg";
@@ -13,18 +14,22 @@ import "./App.css";
 const App = () => {
   const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
   const [expenses, setExpenses] = useState([]);
+  const [toastMessage, setToastMessage] = useState(null);
 
   return (
     <div className="app">
+      {toastMessage !== null && <Toast>{toastMessage}</Toast>}
+
       <CreateExpenseModal
         setExpenses={setExpenses}
         expenses={expenses}
-        onCloseClick={() => {
+        onClose={() => {
           setIsExpenseModalShown(false);
         }}
         isShown={isExpenseModalShown}
+        setToastMessage={setToastMessage}
       />
-      <Layout>
+      <Layout setToastMessage={setToastMessage}>
         <div className="app__header">
           <TotalAmount text="Amount left to spend" img={moneySvg}>
             600

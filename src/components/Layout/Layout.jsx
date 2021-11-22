@@ -11,7 +11,10 @@ const Layout = (props) => {
         </nav>
         <main>{props.children}</main>
       </div>
-      <Sidebar className="layout__sidebar" />
+      <Sidebar
+        className="layout__sidebar"
+        setToastMessage={props.setToastMessage}
+      />
     </div>
   );
 };

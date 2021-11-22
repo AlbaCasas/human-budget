@@ -22,10 +22,12 @@ const CreateIncomeModal = (props) => {
           icon: "home",
         },
       ]);
+      props.setToastMessage("Income created sucessfully");
+      props.onClose();
     }
   };
   return props.isShown === true ? (
-    <Modal onCloseClick={props.onCloseClick} className="income-modal">
+    <Modal onCloseClick={props.onClose} className="income-modal">
       <Title>Add income</Title>
       <form className="income-modal__form" onSubmit={handleIncomeSubmit}>
         <Input
