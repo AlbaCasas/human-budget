@@ -3,6 +3,7 @@ import Title from "../../components/Title";
 import Button from "../../components/Button";
 import ExpenseCard from "./ExpenseCard";
 import CreateExpenseModal from "./CreateExpenseModal";
+import "./Expenses.css";
 
 const Expenses = (props) => {
   const [isExpenseModalShown, setIsExpenseModalShown] = useState(false);
@@ -19,7 +20,7 @@ const Expenses = (props) => {
         isShown={isExpenseModalShown}
         setToastMessage={props.setToastMessage}
       />
-      <div className="app__cta">
+      <div className="expenses__heading">
         <Title>Expenses</Title>
         <Button
           onClick={() => {
