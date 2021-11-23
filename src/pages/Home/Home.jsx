@@ -14,12 +14,12 @@ const Home = () => {
   const [toastMessage, setToastMessage] = useState(null);
 
   return (
-    <div className="app">
+    <div className="home">
       {toastMessage !== null && <Toast>{toastMessage}</Toast>}
       <Layout>
         <LayoutContent>
           <LayoutNav />
-          <div className="app__header">
+          <div className="home__header">
             <TotalAmount text="Amount left to spend" img={moneySvg}>
               600
             </TotalAmount>
