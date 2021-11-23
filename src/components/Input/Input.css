@@ -1,6 +1,9 @@
 .input {
-    border: 1px solid #999;
-    border-radius: 5px;
-    padding: 16px;
-    font-size: 14px;
+  border: transparent;
+  background-color: #f5f8fb;
+  border-radius: 5px;
+  padding: 16px;
+  font-size: 14px;
+  margin: 8px;
+  width: 100%;
 }
