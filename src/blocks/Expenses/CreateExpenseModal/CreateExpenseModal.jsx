@@ -41,7 +41,7 @@ const CreateExpenseModal = (props) => {
           placeholder="$ Amount"
           type="number"
         />
-        <Button variant="default" icon="plus" />
+        <Button variant="icon" icon="plus" />
       </form>
     </Modal>
   ) : null;

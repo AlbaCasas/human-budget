@@ -26,7 +26,7 @@ const Incomes = (props) => {
           <Button
             onClick={() => setIsIncomeModalShown(true)}
             icon="plus"
-            variant="default"
+            variant="icon"
           />
         </SidebarHeading>
         {incomes.map((item) => {
