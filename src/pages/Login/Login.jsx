@@ -1,17 +1,30 @@
+import { useNavigate } from "react-router-dom";
 import Title from "../../components/Title";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import "./Login.css";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="login">
       <div className="login__left">
-        <form className="login__form">
+        <form
+          className="login__form"
+          onSubmit={(event) => {
+            event.preventDefault();
+          }}
+        >
           <Title className="login__title">Human Budget</Title>
           <Input placeholder="Email" type="email" />
           <Input placeholder="Password" type="password" />
-          <Button variant="default" className="login__button">
+          <Button
+            variant="default"
+            className="login__button"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             Log in
           </Button>
         </form>
